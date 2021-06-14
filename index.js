@@ -16,7 +16,7 @@
 function processFirstItem(stringList, callback) {
   return callback(stringList[0])
 }
-console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
+console.log(processFirstItem(['foo','bar'],function(str){return str+str})); 
 
 // ⭐️ Example Challenge END ⭐️
 
@@ -28,11 +28,14 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   Study the code for counter1 and counter2, then answer the questions below.
   
   1. What is the difference between counter1 and counter2?
+    counter 1 is the variable assigned to function counter maker and counter 2 is a function in itself.
   
   2. Which of the two uses a closure? How can you tell?
+    both, because counter1 has a function assigned to it which has a child function that reaches back to the parent to access count. although counter2 does not have counter declared within the function the the closure is reaching out to global scope.
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+     since counter1 is a variable with a function assigned, you can recreate many functions of counterMaker.
 */
 
 // counter1 code
